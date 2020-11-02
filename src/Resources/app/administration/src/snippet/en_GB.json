@@ -3,5 +3,8 @@
     "title": "API Test",
     "success": "Connection was successfully tested",
     "error": "Connection could not be established. Please check the config."
+  },
+  "bunnycdn-config-info-garbage": {
+    "text": "When deleting, renaming, overwriting files, they will be backuped into folder named \"garbage/currentDate/\".\nThis applies just on filesystems using bunnycdn"
   }
 }

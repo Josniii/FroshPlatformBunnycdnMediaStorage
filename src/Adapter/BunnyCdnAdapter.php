@@ -546,6 +546,10 @@ class BunnyCdnAdapter implements AdapterInterface
             return;
         }
 
+        if (mb_strpos($path, 'garbage/') === 0) {
+            return;
+        }
+
         $garbagePath = 'garbage/' . date('Ymd') . '/' . $path;
 
         /* There could be a file on this day */

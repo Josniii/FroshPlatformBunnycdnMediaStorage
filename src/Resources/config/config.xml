@@ -75,6 +75,19 @@
             <helpText lang="de-DE">Durch Aktivieren wird die Geschwindigkeit der Themenerstellung verringert</helpText>
         </input-field>
 
+        <component name="bunnycdn-api-test-button">
+            <name>apiTest</name>
+            <label>Test API</label>
+        </component>
+
+        <component name="bunnycdn-config-restriction">
+            <name>configRestriction</name>
+        </component>
+    </card>
+
+    <card>
+        <title>Alternative CdnUrl</title>
+
         <input-field type="url">
             <name>FilesystemPublicUrl</name>
             <label>Alternative CdnUrl for filesystem public</label>
@@ -98,25 +111,38 @@
             <label>Alternative CdnUrl for filesystem asset</label>
             <label lang="de-DE">Alternative CdnUrl für das Asset-Filesystem</label>
         </input-field>
+    </card>
+
+    <card>
+        <title>Backup files into folder garbage on specific operations onto bunnyCDN filesystem</title>
+        <title lang="de-DE">Sichere Dateien bei bestimmten Vorgängen im Order "garbage" auf BunnyCDN</title>
 
         <input-field type="bool">
-            <name>useGarbage</name>
-            <label>Backup files into folder garbage on specific operations onto bunnyCDN filesystem</label>
-            <label lang="de-DE">Sichere Dateien bei bestimmten Vorgängen im Order "garbage" auf BunnyCDN</label>
+            <name>FilesystemPublicUseGarbage</name>
+            <label>Garbage Public filesystem</label>
             <defaultValue>false</defaultValue>
-            <helpText>When deleting, renaming, overwriting files, they will be backuped into folder named "garbage/currentDate/".
-                This applies just on filesystems using bunnycdn</helpText>
-            <helpText lang="de-DE">Beim Löschen, Umbenennen und Überschreiben von Dateien werden diese in einem Ordner mit dem Namen "garbage/aktuellesDatum/" gesichert.
-                Dies gilt nur für Filesysteme, die bunnycdn verwenden</helpText>
         </input-field>
 
-        <component name="bunnycdn-api-test-button">
-            <name>apiTest</name>
-            <label>Test API</label>
-        </component>
+        <input-field type="bool">
+            <name>FilesystemSitemapUseGarbage</name>
+            <label>Garbage Sitemap filesystem</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
 
-        <component name="bunnycdn-config-restriction">
-            <name>configRestriction</name>
+        <input-field type="bool">
+            <name>FilesystemThemeUseGarbage</name>
+            <label>Garbage Theme filesystem</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>FilesystemAssetUseGarbage</name>
+            <label>Garbage Asset filesystem</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <component name="bunnycdn-config-info-garbage">
+            <name>bunnycdnconfiginfogarbage</name>
         </component>
     </card>
 

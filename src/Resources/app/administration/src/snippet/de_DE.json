@@ -3,5 +3,8 @@
     "title": "API Test",
     "success": "Verbindung wurde erfolgreich getestet",
     "error": "Verbindung konnte nicht hergestellt werden. Bitte prüfe die Konfiguration."
+  },
+  "bunnycdn-config-info-garbage": {
+    "text": "Beim Löschen, Umbenennen und Überschreiben von Dateien werden diese in einem Ordner mit dem Namen \"garbage/aktuellesDatum/\" gesichert.\nDies gilt nur für Filesysteme, die bunnycdn verwenden"
   }
 }

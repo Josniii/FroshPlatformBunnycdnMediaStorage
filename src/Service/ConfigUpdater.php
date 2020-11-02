@@ -69,7 +69,6 @@ class ConfigUpdater
             'config' => [
                 'apiUrl' => rtrim($pluginConfig['CdnHostname'], '/') . '/' . $pluginConfig['StorageName'] . '/' . $pluginConfig['CdnSubFolder'],
                 'apiKey' => $pluginConfig['ApiKey'],
-                'useGarbage' => $pluginConfig['useGarbage'] ?? false,
                 'neverDelete' => $pluginConfig['neverDelete'] ?? false,
             ],
         ];
@@ -98,6 +97,10 @@ class ConfigUpdater
 
             if (!empty($pluginConfig['Filesystem' . ucfirst($type)])) {
                 $filesystem = $filesystemBunnyCdnConfig;
+
+                if (!empty($pluginConfig['Filesystem' . ucfirst($type) . 'UseGarbage'])) {
+                    $filesystem['useGarbage'] = $pluginConfig['Filesystem' . ucfirst($type) . 'UseGarbage'];
+                }
             }
 
             if (!empty($pluginConfig['Filesystem' . ucfirst($type) . 'Url'])) {
